@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login - FinTrack Pro</title>
+        <link rel="stylesheet" href="./css/auth.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <div class="auth-card">
+            <h2>Welcome Back</h2>
+            <p>Login to FinTrack Pro</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required />
+                </div>
+                <button id="login">Login</button>
+            </form>
+            <p id="message">
+                Don't have an account? <a href="register.html">Register here</a>
+            </p>
+        </div>
+
+        <script type="module" src="./js/auth.js"></script>
+    </body>
+</html>
