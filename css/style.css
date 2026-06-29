@@ -280,10 +280,21 @@ main {
 
 /* Tables */
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 16px;
+}
+#filter {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+#type-filter {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-main);
+    color: var(--text-dark);
+    outline: none;
+    cursor: pointer;
 }
 table {
     width: 100%;
@@ -315,15 +326,6 @@ td {
     color: var(--green-text);
     font-weight: 600;
 }
-.status::before {
-    content: "• ";
-}
-.status.complete {
-    color: var(--green-text);
-}
-.status.pending {
-    color: var(--text-muted);
-}
 
 /* Charts */
 .chart-area {
@@ -333,40 +335,13 @@ td {
     border-radius: 8px;
     margin-top: 16px;
 }
-
-/* Dark Summary Card */
-.summary-card.dark {
-    background-color: #1a1d21;
-    color: #fff;
-    border: none;
-}
-.summary-card.dark p {
-    color: #a0a0a0;
-}
-.summary-stats {
-    display: flex;
-    gap: 24px;
-    margin-top: 20px;
-}
-.summary-stats small {
-    color: #a0a0a0;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-.summary-stats h4 {
-    font-size: 20px;
-    margin-top: 4px;
+#flow-chart {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Settings Form */
-.icon-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.icon-title .card-icon {
-    margin-bottom: 0;
-}
 .form-row {
     display: flex;
     gap: 16px;
@@ -383,8 +358,7 @@ td {
     font-size: 14px;
     font-weight: 500;
 }
-.form-group input,
-.form-group textarea {
+.form-group input {
     padding: 0.625rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -459,27 +433,6 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.currency-select {
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    background: var(--bg-main);
-    color: var(--text-dark);
-}
-
-.data-btn {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 0.75rem;
-}
-.data-btn i {
-    font-size: 20px;
-}
-.text-left {
-    text-align: left;
-}
-
 /* --- NEW MODAL & ACTION STYLES --- */
 .action-btn {
     background: none;
@@ -549,4 +502,23 @@ select {
     color: var(--text-dark);
     font-family: inherit;
     width: 100%;
+}
+
+#txDate {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+#txDescription {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+#txAmount {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
 }

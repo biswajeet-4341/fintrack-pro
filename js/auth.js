@@ -14,7 +14,7 @@ if (loginForm) {
         const loginAttempt = loginUser(username, password);
 
         if (loginAttempt.success) {
-            // setUser(username);
+            setUser(username);
             window.location.replace("index.html");
         } else {
             alert(loginAttempt.message);
@@ -33,7 +33,7 @@ if (registerForm) {
 
         if (registerAttempt.success) {
             alert(registerAttempt.message);
-            window.location.href = "login.html";
+            window.location.replace("login.html");
         } else {
             alert(registerAttempt.message);
         }

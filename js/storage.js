@@ -18,7 +18,10 @@ export function getUser(username) {
     return registeredUsers.find((elem) => elem.username === username);
 }
 
-// export function setUser(username) {
-//     const user = getUser(username);
-//     localStorage.setItem("user", JSON.stringify({ username, currency }));
-// }
+export function setUser(username) {
+    const user = getUser(username);
+    localStorage.setItem(
+        "user",
+        JSON.stringify({ username, currency: user.currency }),
+    );
+}
